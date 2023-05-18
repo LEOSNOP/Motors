@@ -5,17 +5,26 @@ import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import org.junit.Assert;
+import pageObjects.MotorPage;
+
+import static entidades.TimeSleep.timesleep;
 
 public class MotorSteps extends BaseStep {
 
+    MotorPage b = new MotorPage(MotorSteps.driver);
+
+
     @Dado("^que o usuario acessa a pagina da webMotors$")
     public void queOUsuarioAcessaAPaginaDaWebMotors() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        b.abrindo_pagina();
+        timesleep(3000);
+        Assert.assertTrue(b.verif_pagina());
+        timesleep(3000);
     }
 
     @Quando("^o usuario faz a busca por \"([^\"]*)\"$")
-    public void oUsuarioFazABuscaPor(String arg1) throws Throwable {
+    public void oUsuarioFazABuscaPor(String busca) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
