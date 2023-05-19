@@ -61,15 +61,17 @@ public class MotorSteps extends BaseStep {
     }
 
     @Quando("^o usuario faz busca \"([^\"]*)\"$")
-    public void oUsuarioFazBusca(String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void oUsuarioFazBusca(String Vazia) throws Throwable {
+        b.busca_marca(Vazia);
+        timesleep(3000);
     }
 
     @Entao("^o sistema permanece na pagina$")
     public void oSistemaPermaneceNaPagina() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertTrue(b.verif_b_vazia());
+        timesleep(3000);
+        Assert.assertTrue(b.verif_pagina());
+        timesleep(3000);
     }
 
 }

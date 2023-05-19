@@ -2,6 +2,7 @@ package pageObjects;
 
 import basePages.BasePage;
 import elementos.MotorsElements;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import static entidades.TimeSleep.timesleep;
@@ -43,6 +44,14 @@ public class MotorPage extends BasePage {
         timesleep(3000);
         driver.findElement(MotorsElements.click_Mod_Ver).click();
         timesleep(3000);
+    }
+
+    public boolean verif_b_vazia(){
+        String verif = "Não encontramos este termo, verifique a ortografia ou clique em Ver ofertas";
+        String texto = driver.findElement(MotorsElements.verif_busca_vazia).getText();
+        Assert.assertEquals(verif, texto);
+        timesleep(3000);
+        return true;
     }
 
 

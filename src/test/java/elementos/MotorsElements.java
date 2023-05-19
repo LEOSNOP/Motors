@@ -18,6 +18,8 @@ public class MotorsElements {
 
     public static By click_Mod_Ver = By.cssSelector("a[href$='1705']");
 
+    public static By verif_busca_vazia = By.cssSelector("div[class='sc-dSuTWQ kVGRby']");
+
 
 
     public static String getUrl() {
