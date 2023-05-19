@@ -38,6 +38,13 @@ public class MotorPage extends BasePage {
         return true;
     }
 
+    public void busca_Mod_ver(String busca){
+        driver.findElement(MotorsElements.busca_marca).sendKeys(busca);
+        timesleep(3000);
+        driver.findElement(MotorsElements.click_Mod_Ver).click();
+        timesleep(3000);
+    }
+
 
 
 

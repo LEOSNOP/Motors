@@ -10,11 +10,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/motors.feature",
         glue = "steps",
-        //tags = "@tp1",
+        tags = "@tp1",
         //plugin = {"pretty", "html:target/report_html_busca"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
-        dryRun = true
+        dryRun = false
 )
 
 public class Runner {
