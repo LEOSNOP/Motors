@@ -21,12 +21,16 @@ public class MotorSteps extends BaseStep {
         timesleep(3000);
         Assert.assertTrue(b.verif_pagina());
         timesleep(3000);
+        BaseStep.Screenshot("verificando Pagina");
+        timesleep(3000);
     }
 
     @Quando("^o usuario faz a busca por \"([^\"]*)\"$")
     public void oUsuarioFazABuscaPor(String marca) throws Throwable {
         b.busca_marca(marca);
         timesleep(4000);
+
+
     }
 
     @Entao("^verifica o resultado da busca pela marca$")
