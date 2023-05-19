@@ -24,7 +24,7 @@ Funcionalidade: testar a busca
   @tp2
   Esquema do Cenário: Cenario: busca por Modelo
   Dado que o usuario acessa a pagina da webMotors
-  Quando o usuario faz a busca por <modelo_carro>
+  Quando o usuario faz a busca pelo <modelo_carro>
   Entao verifica o resultado da busca pelo modelo
 
     Exemplos: lista de modelos
@@ -36,7 +36,7 @@ Funcionalidade: testar a busca
   @tp3
   Esquema do Cenário: Cenario: Busca por versão
   Dado que o usuario acessa a pagina da webMotors
-  Quando o usuario faz a busca por <versao_carro>
+  Quando o usuario faz a busca pela <versao_carro>
   Entao verifica o resultado da busca pela versao
 
     Exemplos: lista de versoes
@@ -53,4 +53,4 @@ Funcionalidade: testar a busca
 
     Exemplos:
       |vazio|
-      |" "  |
+      |"   "|

@@ -25,14 +25,14 @@ public class MotorSteps extends BaseStep {
 
     @Quando("^o usuario faz a busca por \"([^\"]*)\"$")
     public void oUsuarioFazABuscaPor(String busca) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        b.busca_marca(busca);
+        timesleep(4000);
     }
 
     @Entao("^verifica o resultado da busca pela marca$")
     public void verificaOResultadoDaBuscaPelaMarca() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertTrue(b.verif_busca());
+        timesleep(3000);
     }
 
     @Entao("^verifica o resultado da busca pelo modelo$")
